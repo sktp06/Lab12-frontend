@@ -11,5 +11,17 @@ const apiClient = axios.create({
 export default {
   getOrganizers() {
     return apiClient.get('/organizers')
+  },
+  saveOrganizer(organizer) {
+    return apiClient.post('/organizer', organizer)
+  },
+  uploadFile(file) {
+    let formData = new FormData()
+    formData.append('file', file)
+    return apiClient.post('/uploadFile', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    })
   }
 }

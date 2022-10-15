@@ -9,6 +9,7 @@ import NotFoundView from '@/views/NotFoundView.vue'
 import NetWorkErrorView from '@/views/NetworkErrorView.vue'
 import AddEvent from '@/views/EventForm.vue'
 import NProgress from 'nprogress'
+import AddOrganizer from '@/views/OrganizerForm.vue'
 import GStore from '@/store'
 import EventService from '@/services/EventService'
 import OrganizerService from '@/services/OrganizerService.js'
@@ -23,6 +24,11 @@ const routes = [
     path: '/about',
     name: 'about',
     component: AboutView
+  },
+  {
+    path: '/organizer',
+    name: 'AddOrganizer',
+    component: AddOrganizer
   },
   {
     path: '/event/:id',
