@@ -1,2 +1,7 @@
 import { reactive } from 'vue'
-export default reactive({ flashMessage: '', event: null, organizers: null })
+export default reactive({
+  flashMessage: '',
+  event: null,
+  organizers: null,
+  organizer: null
+})

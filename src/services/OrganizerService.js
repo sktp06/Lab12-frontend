@@ -9,11 +9,14 @@ const apiClient = axios.create({
   }
 })
 export default {
-  getOrganizers() {
-    return apiClient.get('/organizers')
+  getOrganizers(perPage, page) {
+    return apiClient.get('/organizer?_limit=' + perPage + '&_page=' + page)
   },
   saveOrganizer(organizer) {
     return apiClient.post('/organizer', organizer)
+  },
+  getOrganizer(id) {
+    return apiClient.get('/organizer/' + id)
   },
   uploadFile(file) {
     let formData = new FormData()
