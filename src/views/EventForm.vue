@@ -33,6 +33,7 @@
 
       <button type="submit">Submit</button>
     </form>
+    {{ files }}
 
     <pre>{{ event }}</pre>
   </div>
@@ -70,8 +71,7 @@ export default {
         console.log(response.map((r) => r.data))
         console.log('finish upload file')
         this.event.imageUrls = response.map((r) => r.data)
-      })
-      EventService.saveEvent(this.event)
+        EventService.saveEvent(this.event)
         .then((response) => {
           console.log(response)
           this.$router.push({
@@ -87,6 +87,8 @@ export default {
         .catch(() => {
           this.$router.push('NetworkError')
         })
+      })
+      
     },
     handleImages(files) {
       this.files = files
