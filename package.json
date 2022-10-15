@@ -13,6 +13,7 @@
     "nprogress": "^0.2.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
+    "vue-upload-drop-images": "^1.0.7",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
