@@ -67,8 +67,9 @@ export default {
           return EventService.uploadFile(file)
         })
       ).then((response) => {
-        console.log(response.map((r => r.data)))
+        console.log(response.map((r) => r.data))
         console.log('finish upload file')
+        this.event.imageUrls = response.map((r) => r.data)
       })
       EventService.saveEvent(this.event)
         .then((response) => {
